@@ -36,7 +36,7 @@ Tensorflow Object Detection API head count
     1. 把 main.py 放到 object_detection底下
     2. 修改object_detection.utils/visualization_utils.py
         $ vim utils/visualization_utils.py
-    3. 執行object_detection.utilsmain.py
+    3. 執行object_detection/utils/main.py
         $ python main.py  
 
 # send json 
