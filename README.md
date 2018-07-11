@@ -23,10 +23,10 @@ Tensorflow Object Detection API head count
     $ pip3 install tensorflow-gpu==1.5
     
     # Tensorflow Object Detection API
-    $ pip install pillow
-    $ pip install lxml
-    $ pip install jupyter
-    $ pip install matplotlib
+    $ pip3 install pillow
+    $ pip3 install lxml
+    $ pip3 install jupyter
+    $ pip3 install matplotlib
     $ git clone https://github.com/tensorflow/models
     $ cd models/research
     $ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
@@ -36,7 +36,7 @@ Tensorflow Object Detection API head count
     1. 把 main.py 放到 object_detection 底下
     2. 修改 把visualization_utils.py 放到object_detection/utils 底下,覆蓋掉原本的
     3. 執行 object_detection/utils/main.py
-        $ python main.py  
+        $ python3 main.py  
 
 # send json 
     $ cd /var/www
