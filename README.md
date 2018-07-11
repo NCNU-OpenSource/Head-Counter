@@ -42,7 +42,7 @@ Tensorflow Object Detection API head count
     $ cd /var/www
     $ vim result.php
     <?php
-      $filename = "/home/nicole/LSA/models/research/object_detection/result.txt";
+      $filename = "models/research/object_detection/result.txt";
       $str="";
       header('Content-Type: application/json');
       if(file_exists($filename)){
