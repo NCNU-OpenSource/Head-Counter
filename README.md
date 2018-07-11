@@ -6,8 +6,8 @@ Tensorflow Object Detection API head count
     $ unzip protoc-3.4.0-linux-x86_64.zip -d protoc3
     $ sudo mv protoc3/bin/* /usr/local/bin/
     $ sudo mv protoc3/include/* /usr/local/include/
-    $ chown nicole /usr/local/bin/protoc
-    $ chown -R nicole /usr/local/include/google
+    $ chown [sudo user] /usr/local/bin/protoc
+    $ chown -R [sudo user] /usr/local/include/google
     $ protoc object_detection/protos/*.proto --python_out=.
     
     - install cuda9.0
