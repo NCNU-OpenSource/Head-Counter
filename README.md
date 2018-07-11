@@ -33,10 +33,9 @@ Tensorflow Object Detection API head count
     $ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}:/usr/lib/nvidia-396/
     
 # 新增 main program 以及修改visualization_utils.py:    
-    1. 把 main.py 放到 object_detection底下
-    2. 修改object_detection.utils/visualization_utils.py
-        $ vim utils/visualization_utils.py
-    3. 執行object_detection/utils/main.py
+    1. 把 main.py 放到 object_detection 底下
+    2. 修改 把visualization_utils.py 放到object_detection/utils 底下,覆蓋掉原本的
+    3. 執行 object_detection/utils/main.py
         $ python main.py  
 
 # send json 
