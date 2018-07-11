@@ -55,3 +55,7 @@ Tensorflow Object Detection API head count
     ?>
 #  Source
    - [tensorflow/models](https://github.com/tensorflow/models)
+
+## License
+
+[Apache License 2.0](LICENSE)
