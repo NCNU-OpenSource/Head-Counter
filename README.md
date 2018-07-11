@@ -8,7 +8,7 @@ Tensorflow Object Detection API head count
     $ sudo mv protoc3/include/* /usr/local/include/
     $ chown [sudo user] /usr/local/bin/protoc
     $ chown -R [sudo user] /usr/local/include/google
-    $ protoc object_detection/protos/*.proto --python_out=.
+    
     
     - install cuda9.0
     $ wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb
@@ -31,7 +31,7 @@ Tensorflow Object Detection API head count
     $ cd models/research
     $ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
     $ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}:/usr/lib/nvidia-396/
-    
+    $ protoc object_detection/protos/*.proto --python_out=.
 # 新增 main program 以及修改visualization_utils.py:    
     1. 把 main.py 放到 object_detection 底下
     2. 修改 把visualization_utils.py 放到models/research/object_detection/utils 底下,覆蓋掉原本的
