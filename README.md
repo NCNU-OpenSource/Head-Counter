@@ -1,6 +1,9 @@
 # Head-Counter
+
 Tensorflow Object Detection API head count
-# 事前準備：
+
+# 事前準備
+
     - install protoc
     $ curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip
     $ unzip protoc-3.4.0-linux-x86_64.zip -d protoc3
@@ -8,7 +11,7 @@ Tensorflow Object Detection API head count
     $ sudo mv protoc3/include/* /usr/local/include/
     $ chown [sudo user] /usr/local/bin/protoc
     $ chown -R [sudo user] /usr/local/include/google
-    
+
     
     - install cuda9.0
     $ wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb
@@ -32,13 +35,16 @@ Tensorflow Object Detection API head count
     $ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
     $ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}:/usr/lib/nvidia-396/
     $ protoc object_detection/protos/*.proto --python_out=.
-# 新增 main program 以及修改visualization_utils.py:    
+
+# 新增 main program 以及修改visualization_utils.py:
+
     1. 把 main.py 放到 object_detection 底下
     2. 修改 把visualization_utils.py 放到models/research/object_detection/utils 底下,覆蓋掉原本的
     3. 執行 models/research/object_detection/utils/main.py
         $ python3 main.py  
 
-# send json 
+# send json
+
     $ cd /var/www
     $ vim result.php
     <?php
@@ -54,7 +60,14 @@ Tensorflow Object Detection API head count
       }
     ?>
 #  Source
+
    - [tensorflow/models](https://github.com/tensorflow/models)
+
+## Docker版本
+
+`docker build -t "head-counter" .`
+
+`docker run -it --rm head-counter bash`
 
 ## License
 
